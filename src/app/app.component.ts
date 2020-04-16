@@ -8,12 +8,12 @@ import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 })
 export class AppComponent {
   form = new FormGroup({});
-  model: any = {"firstName":"cc", "address":{"town":"cc"},};
+  model: any = { "id": 1, "givenName": "XXX", "familyName": "XXX", "birthDate": "2010-01-01T00:00:00", "gender": "man", "title": "Postman insert title", "salutation": "Postman insert salutation", "email": "Postman insert email", "webSite": "Postman insert website", "socialSecurityNumber": "756.7210.1079.72", "address": { "street": "Zurcherstrasse 8", "subAddressing": "Postman insert sub addressingXX", "city": "Postman insert cityXX", "state": "PostmanXX", "country": "afghanistan" }, "insurances": null };
   options: FormlyFormOptions = {};
 
   fields: FormlyFieldConfig[] = [
     {
-      key: 'firstName',
+      key: 'givenName',
       type: 'input',
       templateOptions: {
         required: true,
@@ -26,12 +26,12 @@ export class AppComponent {
       wrappers: ['panel'],
       templateOptions: { label: 'Address' },
       fieldGroup: [{
-        key: 'town',
+        key: 'city',
         type: 'input',
         templateOptions: {
           required: true,
           type: 'text',
-          label: 'Town',
+          label: 'City',
         },
       }],
     },
