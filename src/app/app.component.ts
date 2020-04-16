@@ -8,7 +8,7 @@ import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 })
 export class AppComponent {
   form = new FormGroup({});
-  model: any = {};
+  model: any = {"firstName":"cc", "address":{"town":"cc"},};
   options: FormlyFormOptions = {};
 
   fields: FormlyFieldConfig[] = [
